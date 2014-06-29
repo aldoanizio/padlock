@@ -1,0 +1,22 @@
+{
+    "name": "aldoanizio/padlock",
+    "type": "mako-package",
+    "description": "Auth Library for Mako Framework 4.0",
+    "keywords": ["mako", "framework", "mail"],
+    "homepage": "https://github.com/aldoanizio/padlock",
+    "authors": [
+        {
+            "name": "Aldo Anizio Lugão Camacho",
+            "email": "aldoanizio@yahoo.com.br",
+            "homepage": "http://www.visualcode.com.br"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "padlock\\": "classes"
+        }
+    },
+    "require": {
+        "composer/installers": "*"
+    }
+}
