@@ -17,27 +17,27 @@ use \padlock\Padlock;
 
 class PadlockService extends \mako\application\services\Service
 {
-	/**
-	 * Registers the service.
-	 *
-	 * @access  public
-	 */
+    /**
+     * Registers the service.
+     *
+     * @access  public
+     */
 
-	public function register()
-	{
-		$this->container->registerSingleton(['padlock\Padlock', 'padlock'], function($container)
-		{
-			$config = $container->get('config')->get('padlock::config');
+    public function register()
+    {
+        $this->container->registerSingleton(['padlock\Padlock', 'padlock'], function($container)
+        {
+            $config = $container->get('config')->get('padlock::config');
 
-			$padlock = new Padlock($container->get('request'), $container->get('response'), $container->get('session'));
+            $padlock = new Padlock($container->get('request'), $container->get('response'), $container->get('session'));
 
-			$padlock->setAuthKey($config['auth_key']);
+            $padlock->setAuthKey($config['auth_key']);
 
-			$padlock->setUserModel($config['user_model']);
+            $padlock->setUserModel($config['user_model']);
 
-			$padlock->setCookieOptions($config['cookie_options']);
+            $padlock->setCookieOptions($config['cookie_options']);
 
-			return $padlock;
-		});
-	}
+            return $padlock;
+        });
+    }
 }

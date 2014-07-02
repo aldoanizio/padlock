@@ -27,27 +27,27 @@ class User extends \mako\database\midgard\ORM
     // Class properties
     //---------------------------------------------
 
-	/**
-	 * Table name.
-	 *
-	 * @var string
-	 */
+    /**
+     * Table name.
+     *
+     * @var string
+     */
 
-	protected $tableName = 'users';
+    protected $tableName = 'users';
 
     //---------------------------------------------
     // Mutators and Accessors
     //---------------------------------------------
 
-	/**
-	 * Password mutator.
-	 *
-	 * @access  public
-	 * @return  string
-	 */
+    /**
+     * Password mutator.
+     *
+     * @access  public
+     * @return  string
+     */
 
-	public function passwordMutator($password)
-	{
-		return Password::hash($password);
-	}
+    public function passwordMutator($password)
+    {
+        return Password::hash($password);
+    }
 }

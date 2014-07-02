@@ -16,7 +16,7 @@ return
 	 * The user model to use.
 	 */
 
-	'user_model'  => 'padlock\user\User',
+	'user_model'  => '\padlock\user\User',
 
 	/**
 	 * Cookie options.
